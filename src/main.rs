@@ -43,8 +43,23 @@ fn string_lesson() {
 
     //      More concatenate strings..
     //      The first returns a String Type while the second return the &str string slice.
-    let full_name = ["Jim ", "Lambert"].concat();
-    let spouse_name = concat!["Madi ", "Lambert"];
-    println!("{}", full_name);
-    println!("{}", spouse_name);
+    // let full_name = ["Jim ", "Lambert"].concat();
+    // let spouse_name = concat!["Madi ", "Lambert"];
+    // println!("{}", full_name);
+    // println!("{}", spouse_name);
+
+    //      Indexing into a String
+    // let greeting = "Welcome";
+    // let greeting_index = &greeting[0]; // Errors becuase we cant index a string using integer, must be a range.
+    // let greeting_index = &greeting[0..3]; // Correct way.
+    // println!("{}", greeting_index)
+
+    //      Iterating over a string
+    for string_byte in "Hello, World!".bytes() {
+        println!("{}\n", string_byte)
+    }
+
+    for string_byte in "Hello, World!".chars() {
+        println!("{}\n", string_byte)
+    }
 }
