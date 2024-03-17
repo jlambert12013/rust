@@ -4,6 +4,7 @@ fn main() {
     string_lesson()
 }
 
+// STRINGS
 fn string_lesson() {
     //      Basic Strings
     // let s1: &str = "Hello, World!";
@@ -55,11 +56,21 @@ fn string_lesson() {
     // println!("{}", greeting_index)
 
     //      Iterating over a string
-    for string_byte in "Hello, World!".bytes() {
-        println!("{}\n", string_byte)
-    }
+    // for string_byte in "Hello, World!".bytes() {
+    //     println!("{}\n", string_byte)
+    // }
 
-    for string_byte in "Hello, World!".chars() {
-        println!("{}\n", string_byte)
-    }
+    // for string_byte in "Hello, World!".chars() {
+    //     println!("{}\n", string_byte)
+    // }
+
+    //      Using strings in functions
+    let hello_world = string_funcation("Hello, World!");
+    println!("{}", hello_world)
 }
+
+fn string_funcation(some_string: &str) -> String {
+    return format!("{}", some_string);
+}
+
+// END OF STRINGS
